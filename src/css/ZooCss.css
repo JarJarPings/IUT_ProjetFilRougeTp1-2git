@@ -5,13 +5,18 @@
 /* Gestion body */
 body{
     color: yellow;
-    background-color:limegreen;
+    background-color: limegreen;
+    background-image: url("/enseigneZoo.jpg");
     font-family: "MV Boli";
 }
 
 header{
-    background-color: transparent;
-    border: yellow dotted;
+    background-color: limegreen;
+    background-image: url("https://media.tenor.com/fGE8DZgU5D8AAAAd/jungle-leaves.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border: yellow groove 15px;
 }
 
 /*Select by ID*/
@@ -19,7 +24,6 @@ header{
 /* Gestion des Titre H1 et H2 en haut de chaques pages */
 #MainTitle{
     color: yellow;
-    background-color: lawngreen;
     text-decoration: underline dotted;
     margin: auto 88px;
     text-align: center;
@@ -39,11 +43,11 @@ header{
     padding-right: 50px;
     margin: auto 88px;
     text-align: center;
-    background-color: forestgreen;
+
 }
 
 #MainMenu {
-    border:  red;
+
     border-width: 50px;
 }
 
@@ -51,7 +55,7 @@ header{
     background-color: yellow;
     width: 100px;
     text-align: center;
-    border: limegreen dotted;
+    border: yellow groove;
 
 }
 
@@ -79,7 +83,8 @@ header{
 #MainTable{
     color: limegreen;
     border: red;
-    border: yellow dotted;
+    border: yellow groove 8px;
+    border-top: none;
 }
 
 #MainTable thead{
@@ -94,8 +99,17 @@ header{
 
 #MainTable >tbody tr {
     color: yellow;
+    font-weight: bolder;
 
 }
+
+
+#MainTable >tbody>tr:hover{
+
+    color: orange;
+
+}
+
 
 /*Gestion section page acceuil*/
 
@@ -126,12 +140,6 @@ header{
 }
 
 
-/*Test pointer-event sur Page Acceuill*/
-
-
-.ArticleEvent{
-
-}
 
 
 /*Images du tabeau Animaux du zoo*/
@@ -148,4 +156,54 @@ span.SpanDescAnimal{
     pointer-events: auto;
     mouse-event: pointermove;
 
+}
+
+/*Class Menu déroulant page perso*/
+
+.sous{
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav > ul li:hover .sous{
+    display: block;
+}
+/*
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+*/
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+
+}
+
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+
+}
+
+.sous a:hover{
+    border-bottom: none;
+    text-decoration: underline red 3px;
+    background: orange;
+    background-size: 50px;
+
+}
+
+.deroulant > a:after{
+    content:"▼";
+    font-size: 12px;
+    display: inline-block;
+
+}
+.deroulant > li {
+    display: inline-block;
 }
